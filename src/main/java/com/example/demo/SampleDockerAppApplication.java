@@ -12,12 +12,12 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 public class SampleDockerAppApplication {
 	
 	@Autowired
-	private SampleDockerConstants constants;
+	private SampleDockerConstants constant;
 	
 	@Bean
 	   public RedisConnectionFactory redisConnectionFactory() {
 		LettuceConnectionFactory connectionFactory = new LettuceConnectionFactory();
-		connectionFactory.setHostName(constants.getHost());
+		connectionFactory.setHostName(constant.getHost());
 		return connectionFactory;
 	   }
 	
