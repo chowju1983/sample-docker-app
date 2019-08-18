@@ -4,7 +4,7 @@ services:
   
 before_install: 
   - mvn clean install
-  - docker-compose up
+  - docker-compose build
    
   
   
