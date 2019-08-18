@@ -11,8 +11,8 @@ before_install:
 deploy: 
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "sample-docker-app"
-  env: "SampleDockerApp-env"
+  app: "sample-docker-application"
+  env: "SampleDockerApplication-env"
   bucket-name: "elasticbeanstalk-us-east-1-326359242220" 
   bucket_path: "sample-docker-app"
   access_key_id: $ACCESS_KEY
