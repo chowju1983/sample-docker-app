@@ -4,7 +4,18 @@ services:
   
 before_install: 
   - mvn clean install
-  - docker-compose build
+  - docker build .
    
-  
+deploy: 
+  provider: elasticbeanstock
+  region: "us-east-1"
+  app: "sample-docker-app"
+  env: "SampleDockerApp-env"
+  bucket-name: "elasticbeanstalk-us-east-1-326359242220" 
+  bucket_path: "sample-docker-app"
+  on:
+    branch: master 
+  access_key_id: $ACCESS_KEY
+  secret_access-key: 
+    secure: "$SECRET_ACCESS_KEY"
   
